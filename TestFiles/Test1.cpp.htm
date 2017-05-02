@@ -1,0 +1,31 @@
+<PRE>
+// Test1.cpp
+
+#include "Test1.h"
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+
+Test::Test1::Test1() {}
+
+Test::Test1::~Test1() {}
+
+template&lt;typename T&gt;
+std::string toString(const T& t)
+{
+  std::ostringstream out;
+  out &lt;&lt; t;
+  return out.str();
+}
+
+using namespace Scanner;
+
+#ifdef TEST_TEST1
+
+int main()
+{
+  SemiExp se1;
+  std::cout &lt;&lt; "\n  " &lt;&lt; toString&lt;size_t&gt;(se1.length());
+  std::cout &lt;&lt; "\n\n";
+}
+#endif
+</PRE>
